@@ -2,8 +2,8 @@
 /dist
 /node_modules
 /images
-/images/buildings
-/images/plots
+/images/buildings/
+/images/plots/
 
 # Logs
 logs
