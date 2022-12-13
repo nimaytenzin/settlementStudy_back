@@ -1,7 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { PLOTSHAPE_REPOSITORY } from 'src/core/constants';
 import { CreatePlotShapeDto } from './dto/create-plot-shape.dto';
-import { UpdatePlotShapeDto } from './dto/update-plot-shape.dto';
 import { PlotShape } from './entities/plot-shape.entity';
 
 @Injectable()
@@ -12,6 +11,7 @@ export class PlotShapeService {
   ) {}
 
   create(createPlotShapeDto: CreatePlotShapeDto) {
+    console.log(createPlotShapeDto);
     return 'This action adds a new plotShape';
   }
 
@@ -37,8 +37,8 @@ export class PlotShapeService {
     return `This action returns a #${id} plotShape`;
   }
 
-  update(id: number, updatePlotShapeDto: UpdatePlotShapeDto) {
-    return `This action updates a #${id} plotShape`;
+  update(id: number, updatePlotShapeDto) {
+    return `This action updates a #${id} plotShape, ${updatePlotShapeDto}`;
   }
 
   async markCompleted(id: number) {

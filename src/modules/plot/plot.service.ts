@@ -1,6 +1,5 @@
 import { Plot } from './entities/plot.entity';
 import { PLOTS_REPOSITORY } from './../../core/constants/index';
-import { PlotDTO } from './dto/plot.dto';
 import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()

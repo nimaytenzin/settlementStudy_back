@@ -28,7 +28,7 @@ export class PlotImageService {
   }
 
   update(id: number, updatePlotImageDto) {
-    return `This action updates a #${id} plotImage`;
+    return `This action updates a #${id} plotImage ${updatePlotImageDto}`;
   }
 
   remove(id: number) {
