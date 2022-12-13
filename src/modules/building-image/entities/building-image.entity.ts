@@ -1,9 +1,9 @@
 import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
 @Table
-export class PlotImage extends Model {
+export class BuildingImage extends Model {
   @Column(DataType.INTEGER)
-  plotFeatureId: number;
+  buildingFeatureId: number;
 
   @Column(DataType.STRING)
   uri: string;

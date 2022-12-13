@@ -29,11 +29,15 @@ export class PlotImageController {
     }),
   )
   create(@UploadedFile() file, @Param('id') id: number) {
-    console.log(file);
     const data = {
-      uri: 'plots/' + file.filename,
+      uri: `images/plots/${file.filename}`,
+      filename: file.filename,
       plotFeatureId: id,
     };
+    console.log('UPLOADNG\n');
+    console.log(data);
+    console.log('uploaded\n');
+
     return this.plotImageService.create(data);
   }
 

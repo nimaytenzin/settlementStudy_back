@@ -9,8 +9,7 @@ export class Helper {
     } else if (file.mimetype.indexOf('pdf') > -1) {
       fileExtension = 'pdf';
     }
-    const originalName = file.originalname.split('.')[0];
-    cb(null, originalName + '-' + uniqueSuffix + '.' + fileExtension);
+    cb(null, uniqueSuffix + '.' + fileExtension);
   }
 
   static plotImagesFolder(req, file, cb) {

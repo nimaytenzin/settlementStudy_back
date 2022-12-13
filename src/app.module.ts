@@ -8,6 +8,12 @@ import { PlotImageModule } from './modules/plot-image/plot-image.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { PlotShapeModule } from './modules/plot-shape/plot-shape.module';
+import { BuildingShapeModule } from './modules/building-shape/building-shape.module';
+import { BuildingModule } from './modules/building/building.module';
+import { BuildingImageModule } from './modules/building-image/building-image.module';
+import { UnitModule } from './modules/unit/unit.module';
+import { HouseholdModule } from './modules/household/household.module';
+import { MemberModule } from './modules/member/member.module';
 
 @Module({
   imports: [
@@ -19,6 +25,12 @@ import { PlotShapeModule } from './modules/plot-shape/plot-shape.module';
     PlotModule,
     PlotImageModule,
     PlotShapeModule,
+    BuildingShapeModule,
+    BuildingModule,
+    BuildingImageModule,
+    UnitModule,
+    HouseholdModule,
+    MemberModule,
   ],
   controllers: [AppController],
   providers: [AppService],

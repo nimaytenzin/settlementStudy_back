@@ -1,3 +1,9 @@
+import { Member } from './../../../modules/member/entities/member.entity';
+import { Household } from './../../../modules/household/entities/household.entity';
+import { Unit } from './../../../modules/unit/entities/unit.entity';
+import { BuildingImage } from './../../../modules/building-image/entities/building-image.entity';
+import { Building } from './../../../modules/building/entities/building.entity';
+import { BuildingShape } from './../../../modules/building-shape/entities/building-shape.entity';
 import { PlotImage } from './../../../modules/plot-image/entities/plot-image.entity';
 import { databaseConfig } from './database.config';
 import {
@@ -28,7 +34,17 @@ export const databaseProviders = [
           config = databaseConfig.development;
       }
       const sequelize = new Sequelize(config);
-      sequelize.addModels([Plot, PlotImage, PlotShape]);
+      sequelize.addModels([
+        Plot,
+        PlotImage,
+        PlotShape,
+        BuildingShape,
+        Building,
+        BuildingImage,
+        Unit,
+        Household,
+        Member,
+      ]);
 
       await sequelize.sync();
       return sequelize;
